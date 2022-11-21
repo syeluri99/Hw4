@@ -1,0 +1,20 @@
+OBJS	= Hw4.o
+SOURCE	= Hw4.c
+HEADER	= 
+OUT	= Hw4
+CC	 = gcc
+FLAGS	 = -g -c -Wall
+LFLAGS	 = -lpthread
+
+all: $(OBJS)
+	$(CC) -g $(OBJS) -o $(OUT) $(LFLAGS)
+
+Hw4.o: Hw4.c
+	$(CC) $(FLAGS) Hw4.c 
+
+
+clean:
+	
+
+run: $(OUT)
+	./$(OUT)
